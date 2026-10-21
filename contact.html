@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Portal</title>
+    <!-- Google Typography Fonts & Icons FontAwesome -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">Anmol<span>Singh</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home & Details</a></li>
+                <li><a href="summary.html">Summary Page</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="contact-container">
+        
+        <div class="page-header">
+            <h1>Get In Touch</h1>
+            <p>To connect with me, fill out the form given below or click on the direct WhatsApp/Social link.</p>
+        </div>
+
+        <!-- Left Column: Personal Contacts Info -->
+        <div class="info-section">
+            
+            <!-- Email Card -->
+            <div class="info-card">
+                <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                <div class="info-details">
+                    <h3>Email Address</h3>
+                    <p><a href="mailto:anmolpa78@gmail.com">anmolpa78@gmail.com</a></p>
+                </div>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="info-card">
+                <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                <div class="info-details">
+                    <h3>Phone Number</h3>
+                    <p><a href="tel:+919569584023">+91 9569584023</a></p>
+                </div>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <div class="info-card">
+                <div class="icon-box"><i class="fa-brands fa-linkedin"></i></div>
+                <div class="info-details">
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/anmol-singh-patel-699466428?trk=contact-info" target="_blank">Join us </a></p>
+                </div>
+            </div>
+
+            <!-- Instagram Card -->
+            <div class="info-card">
+                <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
+                <div class="info-details">
+                    <h3>Instagram</h3>
+                    <p><a href="https://instagram.com" target="_blank">@_anmol__136</a></p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Column: Interactive WhatsApp Form -->
+        <div class="form-section">
+            <form id="whatsappForm">
+                <div class="form-group">
+                    <label for="name"> Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="purpose"> Purpose</label>
+                    <input type="text" id="purpose" placeholder="e.g. Project Collaboration / Career Guidance" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Send to WhatsApp
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Footer Summary Section -->
+    <footer>
+        <p>&copy; 2026 Education Portal. Built with Clean Code.</p>
+    </footer>
+
+    <!-- Form redirection handling script to WhatsApp -->
+    <script>
+    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const myPhoneNumber = "919569584023"; 
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const purpose = document.getElementById('purpose').value;
+        const message = document.getElementById('message').value;
+        
+        // WhatsApp ke liye perfect message format
+        const formattedMessage = `*Hi Anmol! Website se naya message aaya hai:*%0A%0A` +
+                                 `👤 *Name:* ${encodeURIComponent(name)}%0A` +
+                                 `📧 *Email:* ${encodeURIComponent(email)}%0A` +
+                                 `🎯 *Purpose:* ${encodeURIComponent(purpose)}%0A` +
+                                 `💬 *Message:* ${encodeURIComponent(message)}`;
+        
+        // Modern WhatsApp link format (Yeh jyada reliable hai)
+        const whatsappUrl = `https://wa.me{myPhoneNumber}?text=${formattedMessage}`;
+        
+        // Fallback method jo pop-up blockers ko bypass karta hai
+        const newTab = window.open(whatsappUrl, '_blank');
+        if (!newTab || newTab.closed || typeof newTab.closed == 'undefined') { 
+            // Agar browser ne naye tab ko block kiya, toh isi page par redirect karega
+            window.location.href = whatsappUrl;
+        }
+    });
+</script>
+
+        

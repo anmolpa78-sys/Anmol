@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: darkolivegreen;
+    margin: 0;
+    padding: 0;
+}
+
+.outer{
+    width: 100%;
+    overflow-x:hidden;
+    color: white;
+}
+.header{
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid#ddd;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30%;
+    padding: 0px 20px;
+  background-color:darkblue;
+}
+.menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    height: 100%;
+}
+.menu li{
+    padding: 20px;
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.logo{
+    font-style: italic;
+}
+.logo span{
+    color: blueviolet;
+}
+.hero-outer{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+}
+.hero-left{
+    padding: 8% 0px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.hero-left>h1{
+    font-size:45px;
+}
+.hero-left>h2{
+    color:#53A0FF
+}
+
+.hero-right{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.profile-image{
+    height: 220px;
+    width: 100%;
+    border-radius: 50%;
+}
+.hero-tag{
+    width:180px;
+    background-color:#112344;
+    padding: 10px;
+    border-radius:20px;
+    color: #53A0FF;
+    border: 1px solid#53A0FF;
+    margin-bottom: 20px;
+}
+.about-text{
+  height: 350px;
+    width: 100%;
+    margin: 0 auto;
+
+margin-top: 20px;
+}
+.about-text p{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 10px 20px;
+    color: white;
+}
+/* Container to match the dark blue top line aesthetic */
+.table-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;            
+}
+
+
+/* Main Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  color:white
+}
+
+/* Table Header (Dark Blue Background) */
+th {
+    background-color: #0c2b5c;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 10px;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+}
+
+/* Table Data Cells (Light Gray Outline) */
+td {
+    padding: 12px 10px;
+    text-align: center;
+    color: white;
+    border: 1px solid #e0e0e0;
+  
+        .skills-table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse; 
+            background-color: #fff;
+            border: 1px solid #d0d7de;
+        }
+
+        
+        .skills-table th {
+            background-color: #163664; 
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 14px;
+            width: 50%; 
+            text-align: center;
+            border-bottom: 1px solid #d0d7de;
+        }
+        .skills-table th:first-child, 
+        .skills-table td:first-child {
+            border-right: 1px solid #d0d7de;
+        }
+        .skills-table td {
+            padding: 35px 20px;
+            vertical-align: top; 
+            text-align: center;
+        }
+
+        .skills-table ul {
+            display: inline-block;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .skills-table li {
+            font-size: 14px;
+            color: #333333;
+            line-height: 1.8;
+            margin-bottom: 5px;
+        }
+  
+.contact-outer{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+.contact-left{
+    width: 50%;
+}
+.contact-top{
+    padding: 20px;
+    line-height: 1.4;
+}
+.contact-top b{
+    color: crimson;
+}
+.contact-top p{
+    color:#ddd
+}
+.contact-right{
+    width: 50%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-right input{
+    height: 25px;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid white;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+
+}
+.contact-right textarea{
+    height: 25px;
+    border: none;
+    padding: 10px;
+    color: white;
+    outline: none;
+    background-color: transparent;
+    resize: none;
+    border-radius: 8px;
+}
+.contact-right button{
+    padding: 10px;
+    font-size: 20px;
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 20%;
+    margin: 0 auto;
+}
